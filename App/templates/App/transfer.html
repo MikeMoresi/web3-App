@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'App/base.html' %}
+{% block homepage %}
+<html lang="en">
+
+<body>
+    <form method="POST" >
+        {% csrf_token %}
+
+        {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Transfer</button>
+
+    </form>
+</body>
+
+</html>
+{% endblock %}
