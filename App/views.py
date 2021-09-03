@@ -295,7 +295,6 @@ def homepage(request):
             tx_receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
             rich_logs = basilContract.events.Transfer().processReceipt(tx_receipt)
             transfer.event = rich_logs[0]['args']
-            transfer.status = tx_receipt['status']
             transfer.save()
             return redirect('/success', pk=transfer.pk)
     else:

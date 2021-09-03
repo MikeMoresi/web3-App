@@ -2,8 +2,6 @@ import pytest
 from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:8545'))
-account1 = '0x6Ce9bFDD97098656721D8A6d0d29Fd8d830746Dc'
-account2 = '0x97fd60201C347C40f9989926497c4F13997F8626'
 contractAddress = '0xDD04405B891cAdE88524585ee78F91a17bF25451'
 abi = [
 	{
